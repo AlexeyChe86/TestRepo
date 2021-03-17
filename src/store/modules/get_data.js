@@ -18,6 +18,7 @@ const actions = {
     [GET_DATA_REQUEST]: ({commit}, data) => {
         commit(GET_DATA_REQUEST)
         return postRequest(
+            'get_data', // Сам endpoint
             commit,
             GET_DATA_SUCCESS,
             GET_DATA_FAILURE,

@@ -2,8 +2,8 @@ import {BASE_URL} from '../../store/actions/base'
 import axios from 'axios'
 
 // GET запрос
-export const getRequest = (commit, success, error, data) => {
-    axios.get(`${BASE_URL}/get_data?${data}`, {
+export const getRequest = (endpoinst, commit, success, error, data) => {
+    axios.get(`${BASE_URL}/${endpoinst}?${data}`, {
         headers: {
             'Content-Type': 'application/json',
         }
@@ -17,8 +17,8 @@ export const getRequest = (commit, success, error, data) => {
 }
 
 // POST запрос
-export const postRequest = (commit, success, error, data) => {
-    axios.post(`${BASE_URL}/send_data`, data, {
+export const postRequest = (endpoinst, commit, success, error, data) => {
+    axios.post(`${BASE_URL}/${endpoinst}`, data, {
         headers: {
             'Content-Type': 'application/json',
         }
