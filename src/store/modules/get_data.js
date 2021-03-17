@@ -5,7 +5,7 @@ import {
 } from '../../store/actions/get_data'
 import {postRequest} from '../../network/api/api'
 
-
+// Моделька из Response
 const state = {
     code: null,
     message: null,
@@ -13,6 +13,7 @@ const state = {
     status: null
 }
 
+// Action события
 const actions = {
     [GET_DATA_REQUEST]: ({commit}, data) => {
         commit(GET_DATA_REQUEST)
@@ -25,6 +26,7 @@ const actions = {
     }
 }
 
+// Мутация состояний
 const mutations = {
     [GET_DATA_REQUEST]: state => {
         state.status = "loading"
