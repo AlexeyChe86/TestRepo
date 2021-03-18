@@ -30,8 +30,8 @@ export default {
   methods: {
     getData(e) {
       e.preventDefault()
-      this.$store.dispatch('GET_DATA_SUCCESS', this.data).then((response) => {
-        this.result = response
+      this.$store.dispatch('GET_DATA_SUCCESS', this.data).then(() => {
+        this.$store.state.result = response
       })
     }
   }
